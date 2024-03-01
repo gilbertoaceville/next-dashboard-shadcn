@@ -1,12 +1,12 @@
+import { NavProps } from "@/components/ui/nav";
 import {
-    ShoppingCart,
-    LayoutDashboard,
-    UsersRound,
-    Settings,
-    ChevronRight
-  } from "lucide-react";
+  ShoppingCart,
+  LayoutDashboard,
+  UsersRound,
+  Settings,
+} from "lucide-react";
 
-const NAV_LINKS = [
+export const NAV_LINKS: NavProps["links"] = [
   {
     title: "Dashboard",
     href: "/",
@@ -20,7 +20,7 @@ const NAV_LINKS = [
     variant: "ghost",
   },
   {
-    title: "Ordrs",
+    title: "Orders",
     href: "/orders",
     icon: ShoppingCart,
     variant: "ghost",
