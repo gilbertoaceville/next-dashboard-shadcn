@@ -1,4 +1,5 @@
-import { NavProps } from "@/components/ui/nav";
+import { IDashboard, NavProps } from "@/global";
+
 import {
   ShoppingCart,
   LayoutDashboard,
@@ -37,7 +38,7 @@ export const NAV_LINKS: NavProps["links"] = [
   },
 ];
 
-export const dashboardData = {
+export const dashboardData: IDashboard = {
   cardData: [
     {
       label: "Total Revenue",

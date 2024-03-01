@@ -1,24 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { LucideIcon } from "lucide-react";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { usePathname } from "next/navigation";
+import { NavProps } from "@/global";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "./button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./tooltip";
-
-export interface NavProps {
-  isCollapsed: boolean;
-  links: {
-    title: string;
-    label?: string;
-    href: string;
-    icon: LucideIcon;
-    variant: "default" | "ghost";
-  }[];
-}
 
 export function Nav({ links, isCollapsed }: NavProps) {
   const pathname = usePathname();
