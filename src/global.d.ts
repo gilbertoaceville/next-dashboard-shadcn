@@ -17,3 +17,10 @@ type NavProps = {
     variant: "default" | "ghost";
   }[];
 }
+
+type Payment = {
+  name: string;
+  email: string;
+  lastOrder: string;
+  method: string;
+};
