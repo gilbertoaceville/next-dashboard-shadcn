@@ -25,3 +25,8 @@ type Payment = (
   lastOrder: string;
   method: string;
 };
+
+type Setting = {
+  category: string;
+  value: string | number | boolean;
+}

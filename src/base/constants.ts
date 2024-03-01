@@ -1,4 +1,4 @@
-import { IDashboard, NavProps, Payment } from "@/global";
+import { IDashboard, NavProps, Payment, Setting } from "@/global";
 
 import {
   ShoppingCart,
@@ -278,5 +278,24 @@ export const orderData: Payment[] = [
     status: "Pending",
     lastOrder: "2024-03-30",
     method: "Credit Card"
+  }
+];
+
+export const settingData: Setting[] = [
+  {
+    category: "Account",
+    value: true
+  },
+  {
+    category: "Notifications",
+    value: false
+  },
+  {
+    category: "Language",
+    value: "English"
+  },
+  {
+    category: "Theme",
+    value: "Dark"
   }
 ];
