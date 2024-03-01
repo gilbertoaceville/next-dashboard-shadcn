@@ -5,7 +5,7 @@ import { LucideIcon } from "lucide-react";
 type IDashboard = {
   cardData: CardProps[];
   salesData: SalesProps[];
-}
+};
 
 type NavProps = {
   isCollapsed: boolean;
@@ -16,11 +16,12 @@ type NavProps = {
     icon: LucideIcon;
     variant: "default" | "ghost";
   }[];
-}
+};
 
-type Payment = {
-  name: string;
-  email: string;
+type Payment = (
+  | { order: string; status: string; name?: never; email?: never }
+  | { order?: never; status?: never; name: string; email: string }
+) & {
   lastOrder: string;
   method: string;
 };
