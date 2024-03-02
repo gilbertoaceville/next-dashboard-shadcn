@@ -5,13 +5,15 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useWindowWidth } from "@react-hook/window-size";
 
 import { NAV_LINKS } from "@/base/constants";
+import { useSsrCompatible } from "@/base/hooks/useSsrCompatible";
+
 import { Nav } from "./ui/nav";
 import { Button } from "./ui/button";
 
 export default function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
 
-  const onlyWidth = useWindowWidth();
+  const onlyWidth = useSsrCompatible(useWindowWidth(), 0);
   const isMobile = onlyWidth < 768;
 
   function toggleSidebar() {
