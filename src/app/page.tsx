@@ -3,6 +3,7 @@ import PageTitle from "@/components/PageTitle";
 import { dashboardData } from "@/base/constants";
 import BarChart from "@/components/BarChart";
 import SalesCard from "@/components/SalesCard";
+import { TurnOffDefaultPropsWarning } from "@/components/TurnOffDPWarning";
 
 export default function Home() {
   const { cardData, salesData } = dashboardData;
@@ -19,6 +20,7 @@ export default function Home() {
           <p className="p-4 font-semibold">Overview</p>
 
           <BarChart />
+          <TurnOffDefaultPropsWarning />
         </CardContent>
         <CardContent className="flex justify-between gap-4">
           <section>
